@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Hello World</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">   
+</head>
+<body>
+</body>
+    <script>
+		const article = {
+		title: "Aprendendo template de strings",
+		intro: "Uma breve explicação de como se utilizar template de strings no ES6 em seu codigo hoje",
+		body: "Lorem ipsum dolor sit amet, consectur adipiscing elit...",
+		tags: ["es6", "js", "template-literal"]
+		};
+		
+		function renderAuthor(nome){
+			return (nome) ? nome : "unknown"
+		}
+	    const markup = ` 
+        <article>
+            <header>
+                <h1>${article.title}</h1>
+            </header>
+            <section>
+                <p>${article.intro}</p>
+            </section>
+            <footer>
+                <ul>
+                    ${article.tags.map((tag) => `<li>${tag}</li>`).join('')}
+                </ul>
+                <p>Author: ${renderAuthor(article.author)}</p>
+            </footer>
+        </article>
+    `;
+		
+		document.body.innerHTML = markup;
+    </script>
+    
+
+</html>

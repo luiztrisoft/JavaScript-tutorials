@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Hello World</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">   
+</head>
+
+<body></body>
+
+<script>	
+
+    // class
+    function Animal(kind, sound) {
+        // constructor
+        this.kind = kind;
+        this.sound = sound;
+    }
+	
+    // method
+    Animal.prototype.hello = function() {
+        console.log(`${this.sound} I am a ${this.kind}!`);
+    }
+	
+	const dog = new Animal("Dog", "AU! AU!");
+	const cat = new Animal("Cat", "Miaauu!");
+	
+	cat.hello();
+	
+</script>
+</html>

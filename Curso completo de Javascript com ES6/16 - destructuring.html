@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Hello World</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">   
+</head>
+
+<body></body>
+
+<script>	
+	
+	var data = {
+		name: "Luiz", 
+		surname: "Alberto",
+		age : "32",
+		blog: "https://willian_justen.com.br",
+		social: {
+			twitter: "@Luiz_Alberto", 
+			facebook: "/luizalberto"
+		}
+	};
+	
+	//const name = data.name;
+	//const surname = data.surname;
+	//const twitter = data.social.twitter;
+	//console.log(name);
+	//console.log(surname);
+	//console.log(twitter);
+	
+	const {name, surname} = data;
+	console.log(name);
+	console.log(surname);
+	
+	const { facebook, twitter} = data.social;
+	console.log(facebook);
+	console.log(twitter);
+	
+	const { facebook: fb} = data.social;
+	console.log(fb);
+	
+	const { city = "Dublin" } = data;
+	console.log(city);	
+	
+</script>
+</html>

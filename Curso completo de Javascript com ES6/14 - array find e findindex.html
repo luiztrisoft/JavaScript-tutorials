@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Hello World</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">   
+</head>
+
+<body></body>
+
+<script>	
+	const data = [
+		{
+			name: "Willian",
+			age: 26,
+			city: "Dublin"
+		},
+		{
+			name: "jonas",
+			age: 22,
+			city: "Cologne"
+		}
+	];
+	
+	const sampleArray = [4, -5, 0, -1];
+	const underZero = sampleArray.find(x => x < 0);
+	const underZeroIndex = sampleArray.findIndex(x => x < 0);
+	console.log("Abaixo de zero", underZero);
+	console.log("Indice abaixo de zero", underZeroIndex);
+	
+	const jonas = data.find(person => person.name === "Jonas");
+	const jonasIndex = data.findIndex(person => person.name === "Jonas");
+	console.log("Indice do Jonas", jonasIndex);
+
+</script>
+</html>

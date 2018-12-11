@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Hello World</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">   
+</head>
+
+<body></body>
+
+<script>	
+
+	var defer = new Promise((resolve, reject) => {
+		setTimeout(() => {
+			if (true) {
+				resolve('Hello! It works!');
+			} else {
+				reject('Error!!!');
+			}
+		}, 2000);
+	});
+
+	defer	
+		.then((data) => {
+			console.log(data);
+			return 'foo';
+		})
+		.then((data) => console.log(data))
+		.catch((err) => console.log(err));
+	
+</script>
+</html>

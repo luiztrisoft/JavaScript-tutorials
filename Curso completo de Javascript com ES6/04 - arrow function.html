@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Hello World</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">   
+</head>
+<body>
+
+    <script>
+        const irlanda = ['Dublin', 'Galway', 'Cork'];
+		
+		const love = irlanda.map(function(nome){
+			return "Eu amo " + nome;
+		});
+		
+		const loveArrow = irlanda.map((nome)=>{
+			return "Eu amo " + nome;
+		});
+		
+		const loveArrowSingle = irlanda.map(nome => {
+			return "Eu amo " + nome;
+		});		
+
+		const loveArrowOneLine = irlanda.map(nome => "Eu amo " + nome);
+		
+		const loveChain = irlanda
+			.filter(nome => nome === 'Dublin')
+			.map(nome => "Eu amo " + nome);
+		
+		console.log(loveArrowOneLine);
+		console.log(loveChain);
+		
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Hello World</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">   
+</head>
+
+<body>    
+    <ul id="list">
+		<li>Willian</li>
+		<li>Jonas</li>
+		<li>Gabriel</li>
+    </ul>
+</body>
+
+<script>
+	
+	const list = document.querySelectorAll("#list li");
+	const listArray = Array.from(list); //Conversão para arraylist 
+	
+	console.log(list);//Isto é um NodeList
+	console.log(listArray);//Para usar todos os metodos do array é necessario converter a lista Node para Array
+	
+	const nomes = listArray.map((nome) => nome.textContent);
+	
+	console.log(nomes);
+	
+</script>
+    
+
+</html>

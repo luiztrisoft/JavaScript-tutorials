@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Hello World</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">   
+</head>
+
+<body></body>
+
+<script>	
+	
+	let front = ['react', 'vue', 'angular'];
+	let back = ['python', 'ruby', 'nodejs'];
+	
+	
+	// CONCATENAÇÃO MAIS VERBOSA
+	// let fullstack = [];
+	// fullstack = fullstack.concat(front);
+	// fullstack.push('RxJS');
+	// fullstack = fullstack.concat(back);
+	
+	// COM SPREAD CONSEGUIMOS FAZER EM UMA LINHA
+	let fullstack = [...front, 'RxJS', ...back];
+	
+	console.log(fullstack);	
+	
+	//SEPARAÇÃO DE STRINGS 
+	// console.log([...'will']);  // ["w", "i", "l", "l"] 
+    // console.log(...front);     //f r o n t
+</script>
+</html>

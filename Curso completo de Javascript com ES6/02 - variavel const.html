@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Hello World</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">   
+</head>
+<body>
+
+    <script>
+        const numero = 30;
+		//numero = 12; //NÃO É PERMITIDO 
+		
+		const luiz = {
+			nome : "Luiz",
+			idade : 20
+		}	
+		
+		Object.freeze(luiz);//IMPEDE QUE AS PROPRIEDADES DA CONSTANTE SEJAM ALTERADAS
+		luiz.idade = 30;//É PERMITIDO ALTERAR A PROPRIEDADE DE UMA CONSTRANTE
+		console.log(luiz.idade);//IMPRIME 20 PQ A FUNÇÃO freeze CONGELA O OBJETO
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Hello World</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">   
+</head>
+
+<body></body>
+
+<script>	
+
+	var txt = 'Ireland'; //iterable
+	var it = txt[Symbol.iterator](); //iterator
+	
+	// console.log( it.next() );
+    // console.log( it.next() );
+    // console.log( it.next() );
+    // console.log( it.next() );
+    // console.log( it.next() );
+    // console.log( it.next() );
+    // console.log( it.next() );
+    // console.log( it.next() );
+	
+	for (letter of txt){
+		console.log(letter);
+		if(letter === 'a') break;
+	}	
+	
+</script>
+</html>

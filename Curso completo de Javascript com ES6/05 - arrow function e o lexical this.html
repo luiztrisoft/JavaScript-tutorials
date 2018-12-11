@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Hello World</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">   
+</head>
+<body>
+	<button id="btn">Make my sandwish</button>
+</body>
+
+<script>
+	const sandwich = {
+		bread : 'white bread',
+		cheese : 'cheadar cheese',
+		
+		prepare: function(){
+			return "Eu quero meu sanduiche com " + this.bread + " and " + this.cheese
+		},
+		
+		//Usando arrow function o this pega todo o contexto onde está inserido de sandwish
+		//sendo assim o console imprimirá o prepare() pois o this. se refere a window
+		//Ao trocar a arrow function por function() o this não pertence ao window e sim ao contexto do metodo
+		make: function(){
+			window.setTimeout(()=> {
+				console.log(this.prepare());
+			}, 500);
+		}
+	};
+	
+	const btn = document.getElementById('btn');
+	btn.addEventListener('click', function() { sandwich.make()});
+</script>
+    
+
+</html>
