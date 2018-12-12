@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Hello World</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">   
+</head>
+
+<body></body>
+
+<script>	
+	//Pode guardar um determinado tipo de dado mas possui algumas diferenças quanto ao array
+	//a principal é que ele nãos e baseia por indice
+	//possui elementos unicos(não podemos adicionar elementos repetidos)
+	
+	let mySet = new Set(['Luiz', 'Alberto', 'Ricardo', 'Tiko']);
+	
+	mySet.add("Helia");
+	mySet.add("Helia");
+	mySet.add("Helia");//Só adicionará 1 Helia
+	mySet.add("Willian");
+	
+	console.log(mySet[1]);//undefined
+	
+	let it = mySet.values();    
+    //console.log(it.next());
+	
+	for (name of it) {
+        console.log(name);
+    }
+	
+</script>
+</html>

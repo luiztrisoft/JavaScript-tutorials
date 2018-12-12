@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Hello World</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">   
+</head>
+
+<body></body>
+
+<script>	
+	//Podemos fazer varias coisas nos metodos do proxy(no caso temos get e set mas veja a documentação para saber do restante)
+	//Podemos fazer tratamento de senhas fracas por exemplo
+	//Ação proxial fica ali no meio verificando o que recebemos e fazer a ação desejada ou necessária
+	let obj = {
+		name: "Willian",
+		age: 26
+	};
+	
+	let proxy = new Proxy(obj, {
+		get(target, name) {
+			console.log("Alguém está o pedindo o nome =D");
+			return target[name];
+		}, 
+		set(target, name, value){
+			console.log("Alguém está mudando o nome");
+			target[name] = value.toUpperCase();
+		}
+	});
+	
+</script>
+</html>

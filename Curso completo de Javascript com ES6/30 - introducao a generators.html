@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Hello World</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">   
+</head>
+
+<body></body>
+
+<script>	
+
+	// Uma função com 3 "retornos"
+	function* genNames(){
+		console.log("Chamando primeiro nome");
+		yield "Willian";
+		
+		console.log("Chamando segundo nome");
+		yield "Jonas";
+		
+		console.log("Chamando terceiro nome");
+		yield "Gabriel";
+	}
+	
+	const names = genNames();
+	
+	//é necessário chamar de acordo com o numero de retornos
+	console.log(names.next().value);
+	console.log(names.next());
+	console.log(names.next());
+	
+</script>
+</html>
