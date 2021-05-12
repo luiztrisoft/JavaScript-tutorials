@@ -10,7 +10,9 @@ let objetos = [
 ];
 
 let idsHomensSelecionados = homens && homens.length > 0 ? homens.map(obj => obj.id) : [];
-let mulheres = objetos.filter(item => !idsHomensSelecionados.includes(item.id));
+
+//Filtrar o objeto se ele não estiver incluído na lista de ids selecionados
+let mulheres = objetos.filter(obj => !idsHomensSelecionados.includes(obj.id));
 
 console.log(idsHomensSelecionados); 
 console.log(mulheres); 

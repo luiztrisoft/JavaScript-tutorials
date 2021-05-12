@@ -4,7 +4,7 @@ for(var prop in objeto){
   console.log("Atributo " + prop + " = " + objeto[prop])
 }
 
-console.log('-----------------------------------------')
+console.log('')
 
 //for of (array)
 var dias = ["Sabado", "Domingo"]
@@ -16,7 +16,7 @@ for (var elemento of dias){
 Atributo nome = Luiz
 Atributo idade = 34
 Atributo sobrenome = Alberto
------------------------------------------
+
 Elemento do array: Sabado
 Elemento do array: Domingo
 */
