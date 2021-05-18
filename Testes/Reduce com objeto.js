@@ -11,6 +11,7 @@ let valorInicial = 0;
 let getDespesasBaixadas = totalDespesas 
   .filter(d => d.dataPagamento && d.valor > 0 )
   .map(d => d.valor + (d.valor * (d.imposto ? d.imposto : 0)))  
-  .reduce((acc, el) => acc = acc + el, valorInicial);
+  .reduce((acc, el) => acc = acc + el, valorInicial)
+  .toFixed(2);
 
 console.log(getDespesasBaixadas);
