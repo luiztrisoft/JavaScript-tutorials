@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Array.from</title>
+</head>
+<body>
+  <script>
+    function greet () {
+        //Lista é iteravel mas nao é percorrível pq nao é um array
+        //Se transformarmos a lista em array ela pode acessar o prototype do array
+      const args = ['Luiz', 'Helia'].from(arguments, function (name) {
+        return  '!' + name
+      })
+
+      args.forEach(argument => {
+        console.log(`Hello, ${argument}`)
+      })
+    }
+  </script>
+</body>
+</html>
